@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winetasting"
+dependencies = [
+    'numpy>=1.26',
+    'pandas>=1.5',
+    'pytest>=8.1',
+    'setuptools>=65.6'
+]
+authors = [
+    {name = "Albert Xue", email = "xuebert@gmail.com"}
+]
+description = "For processing and analyzing results of a wine tasting event"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+dynamic = ["readme"]
+license = {file = "LICENSE"}
+version = "0.0.0"
+
+[project.urls]
+"Homepage" = "https://github.com/xuebert/winetasting"
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md"}
+
+#[tool.setuptools.packages.find]
+#where = ["winetasting"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+log_cli = 1
